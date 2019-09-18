@@ -1,0 +1,31 @@
+---
+title: "Dollar damage analysis"
+author: "Hanna Buechi"
+date: "9/18/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+library(tidyverse)
+
+CDF_damages <- read_csv("CDF_dollar_damages_county.csv")
+
+```
+
+```{r basic_calculations}
+
+CDF_damages <- mutate(CDF_damages, damage_area = damages/fire)
+
+```
+
+
+
+
+
+
+
